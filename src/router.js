@@ -17,6 +17,16 @@ const routes = [
     name: 'CarsPage',
     component: loadPage('CarsPage')
   },
+  {
+    path: '/houses',
+    name: 'HousesPage',
+    component: loadPage('HousesPage')
+  },
+  {
+    path: '/houses/:id',
+    name: 'HouseDetailsPage',
+    component: loadPage('HouseDetailsPage')
+  },
   // NOTE the :id is going to make it so that the url as the id of the car we are going to so that we can access it when we need it
   {
     path: '/cars/:id',

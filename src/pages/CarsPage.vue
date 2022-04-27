@@ -1,5 +1,12 @@
 <template>
   <div class="container-fluid">
+    <button
+      class="btn btn-success square-left"
+      data-bs-target="#create-car-modal"
+      data-bs-toggle="modal"
+    >
+      Create
+    </button>
     <div class="row">
       <div class="col-2"></div>
     </div>

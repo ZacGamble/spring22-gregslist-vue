@@ -12,14 +12,6 @@
         >
           Nav
         </button>
-        <button
-          class="btn btn-success square-left"
-          data-bs-target="#create-car-modal"
-          data-bs-toggle="modal"
-          v-if="user.isAuthenticated"
-        >
-          Create
-        </button>
       </div>
       <!-- NOTE user.isAuthenticated is making sure the user is logged in - hiding the button if they are not logged in -->
     </div>
