@@ -1,4 +1,5 @@
 <template>
+  <button class="btn btn-success ms-2" @click="removeHouse">Remove</button>
   <div class="container-fluid">
     <div v-if="house">
       <div class="row justify-content-center">
@@ -13,10 +14,6 @@
               class="mdi mdi-pencil selectable"
               data-bs-toggle="modal"
               data-bs-target="#edit-house-modal"
-            ></i>
-            <i
-              class="mdi mdi-delete ms-2 selectable"
-              @click="deleteHouse()"
             ></i>
           </div>
           <div class="d-flex justify-content-between p-2">
@@ -69,10 +66,10 @@ export default {
       }
     });
     return {
-      async deleteCar() {
+      async removeHouse() {
         try {
           if (await Pop.confirm()) {
-            await housesService.deleteHouse(route.params.id);
+            await housesService.removeHouse(route.params.id);
             Pop.toast("House deleted!", success);
             router.push({ name: "HousesPage" });
           }

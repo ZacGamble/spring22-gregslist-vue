@@ -86,7 +86,7 @@ export default {
     });
     return {
       editable,
-      async handleSubmit() {
+      async handleSubmit(id) {
         try {
           if (editable.value.id) {
             await housesService.editHouse(editable.value);
@@ -102,7 +102,7 @@ export default {
               name: "HouseDetailsPage",
               params: { id: createdHouse.id },
             });
-            Pop.toast("House created!", success);
+            Pop.toast("House created!", "success");
             Modal.getOrCreateInstance(
               document.getElementById("create-house-modal")
             ).toggle();

@@ -1,12 +1,12 @@
 <template>
+  <button
+    class="btn btn-success square-left"
+    data-bs-target="#create-house-modal"
+    data-bs-toggle="modal"
+  >
+    Create
+  </button>
   <div class="row">
-    <button
-      class="btn btn-success square-left"
-      data-bs-target="#create-house-modal"
-      data-bs-toggle="modal"
-    >
-      Create
-    </button>
     <div class="col-4" v-for="h in houses" :key="h.id">
       <House :house="h" />
     </div>
