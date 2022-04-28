@@ -1,5 +1,7 @@
 <template>
-  <button class="btn btn-success ms-2" @click="removeHouse">Remove</button>
+  <div>
+    <button class="btn btn-danger ms-2" @click="removeHouse">Remove</button>
+  </div>
   <div class="container-fluid">
     <div v-if="house">
       <div class="row justify-content-center">
@@ -9,7 +11,7 @@
             :alt="`${house.year} ${house.bedrooms} bd ${house.bathrooms} bath`"
             class="img-fluid"
           />
-          <div class="p-2" v-if="house.creatorId === account.id">
+          <div class="p-2">
             <i
               class="mdi mdi-pencil selectable"
               data-bs-toggle="modal"
@@ -70,7 +72,7 @@ export default {
         try {
           if (await Pop.confirm()) {
             await housesService.removeHouse(route.params.id);
-            Pop.toast("House deleted!", success);
+            Pop.toast("House deleted!", "success");
             router.push({ name: "HousesPage" });
           }
         } catch (error) {

@@ -4,15 +4,7 @@
   </header>
   <main class="container-fluid">
     <div class="row p-2">
-      <div class="col-2">
-        <button
-          class="btn btn-info square-right"
-          data-bs-target="#nav"
-          data-bs-toggle="offcanvas"
-        >
-          Nav
-        </button>
-      </div>
+      <div class="col-2"></div>
       <!-- NOTE user.isAuthenticated is making sure the user is logged in - hiding the button if they are not logged in -->
     </div>
     <router-view />

@@ -5,6 +5,15 @@
         <h2>GregsList</h2>
       </div>
     </router-link>
+    <div>
+      <button
+        class="btn btn-info square-right ms-4"
+        data-bs-target="#nav"
+        data-bs-toggle="offcanvas"
+      >
+        Nav
+      </button>
+    </div>
 
     <button
       class="navbar-toggler"
